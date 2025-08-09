@@ -7,6 +7,10 @@ Basic display definition example:
 external_components:
   - source: github://tiaxter/esphome-components
     components: [ depg0266bn ]
+    
+spi:
+  clk_pin: 18
+  mosi_pin: 23
 
 display:
   - platform: depg0266bn
