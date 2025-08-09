@@ -5,7 +5,7 @@ This repository contains custom components for LilyGo T5 2.66" board. For more i
 Basic display definition example:
 ```yaml
 external_components:
-  - source: github://tiaxter/esphome-custom-components
+  - source: github://tiaxter/esphome-components
     components: [ depg0266bn ]
 
 display:
