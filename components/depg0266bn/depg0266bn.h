@@ -16,7 +16,13 @@ public:
   void display() override;
   void dump_config() override;
 
-  void deep_sleep() override {}
+  void deep_sleep() override {
+    this->power_off_();
+    if (this->reset_pin_ != nullptr) {
+      this->command(0x10);
+      this->data(0x01);
+    }
+  }
 
   void init_display_(uint8_t em);
   void init_full_(uint8_t em);
