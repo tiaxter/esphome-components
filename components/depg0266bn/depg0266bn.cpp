@@ -85,7 +85,7 @@ void DEPG0266BN::_SetRamPointer(uint8_t addrX, uint8_t addrY, uint8_t addrY1) {
   this->command(0x4e);
   this->data(addrX);
   this->command(0x4f);
-  this->data(a8ddrY);
+  this->data(addrY);
   this->data(addrY1);
 }
 
