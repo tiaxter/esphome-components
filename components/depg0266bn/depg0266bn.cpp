@@ -149,14 +149,14 @@ void DEPG0266BN::update_partial_() {
 
 void DEPG0266BN::update_full_() {
   this->command(0x22);
-  this->data(0xf7); // disable analog (powerOff() here)
+  this->data(0xf4); // disable analog (powerOff() here)
   this->command(0x20);
 }
 
 void DEPG0266BN::power_off_() {
   if (this->power_is_on_) {
     this->command(0x22);
-    this->data(0x03);
+    this->data(0x83);
     this->command(0x20);
     delay(POWER_OFF_TIME);
     this->power_is_on_ = false;
